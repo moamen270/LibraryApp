@@ -13,17 +13,17 @@ namespace LibraryApp
                 return SerialNumber - 67412785;
             }
         }
-        private List<BookCard> BookCards { get; }
+        private List<OneSideCard<Book>> BookCards { get; }
         public int NumberOfBorrowedBooks = 0;
         private static int SerialNumber = 67412785;
 
         public Member(string Name , int Phone ,string Address, DateTime Birthday,Gender gender)
             :base(SerialNumber,Name,Phone,Address,Birthday,gender)
         {
-            BookCards = new List<BookCard>();
+            BookCards = new List<OneSideCard<Book>>();
             SerialNumber++;
         }                 
-        public void SetBookCards(BookCard BookCard)
+        public void SetBookCards(OneSideCard<Book> BookCard)
         {
             BookCards.Add(BookCard);
         }

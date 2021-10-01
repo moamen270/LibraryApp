@@ -16,10 +16,10 @@ namespace LibraryApp
         {
             get
             {
-                return NumberOfBooks - NumberOfAvailableBooks;
+                return NumberOfBooks - NumberOfBorrowedBooks;
             }
         }
-        private List<MemberCard> MemberCards = new List<MemberCard>();
+        private List<OneSideCard<Member>> MemberCards = new List<OneSideCard<Member>>();
         static private int Serial = 5151215;
 
         public Book(string Name, Author Author, string Type, int NumberOfBooks)
@@ -30,7 +30,7 @@ namespace LibraryApp
             this.NumberOfBooks = NumberOfBooks;
             ID = ++Serial;
         }
-        public void SetMemberCards(MemberCard MemberCard)
+        public void SetMemberCards(OneSideCard<Member> MemberCard)
         {
             MemberCards.Add(MemberCard);
         }
