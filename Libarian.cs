@@ -10,8 +10,8 @@ namespace LibraryApp
         private static List<BorrowCard> BorrowCards = new List<BorrowCard>();
         private static int NumberOfBorrowCards = 0;
 
-        public Libarian(string Name, Gender gender, DateTime Birthday, int Phone, string Address, double Salary)
-           : base(Name, gender, Birthday, Phone, Address, Salary)
+        public Libarian(string Name, string Phone, string Email, Gender gender, DateTime Birthday, double Salary)
+           : base(Name, gender, Phone, Email, Birthday, Salary)
         {
             SerialNumber++;
         }
@@ -20,7 +20,7 @@ namespace LibraryApp
         {
             if (book.NumberOfAvailableBooks > 0)
             {
-                BorrowCard borrowCard = new BorrowCard(member, book,this);
+                BorrowCard borrowCard = new BorrowCard(member, book, this);
                 BorrowCards.Add(borrowCard);
             }
             else
@@ -48,7 +48,7 @@ namespace LibraryApp
             public OneSideCard<Member> MemberCard;
             public OneSideCard<Book> BookCard;
 
-            public BorrowCard(Member _Member, Book _Book,Libarian _Libarian) : base(true)
+            public BorrowCard(Member _Member, Book _Book, Libarian _Libarian) : base(true)
             {
                 BorrowDate = DateTime.Now;
                 OneSideCard<Member> memberCard = new OneSideCard<Member>(_Member);
@@ -68,11 +68,11 @@ namespace LibraryApp
                 StringBuilder BorrowCard = new StringBuilder();
 
                 BorrowCard.AppendLine($"Borrow Date: {BorrowDate.ToShortDateString()}\tReturn Date: {ReturnDate}");
-                BorrowCard.AppendLine(MemberCard.ToString(true));
-                BorrowCard.AppendLine(BookCard.ToString(true));
+                BorrowCard.AppendLine(MemberCard.PrintIn());
+                BorrowCard.AppendLine(BookCard.PrintIn());
                 BorrowCard.AppendLine(Libarian.ToString());
                 BorrowCard.AppendLine($"Card Serial: {CardID}");
-                
+
                 return BorrowCard.ToString();
             }
 
@@ -80,4 +80,3 @@ namespace LibraryApp
 
     }
 }
-   

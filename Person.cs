@@ -4,13 +4,15 @@ using System.Text;
 
 namespace LibraryApp
 {
-    enum Gender { Male, Female }
+    enum Gender
+    {
+        Male,
+        Female
+    }
     abstract class Person
     {
         public string Name { get; }
         public int ID { get; }
-        public int Phone { get; }
-        public string Address { get; }
         public Gender Gender { get; }
         public DateTime Birthday { get; }
         public int Age
@@ -25,15 +27,12 @@ namespace LibraryApp
                 return _Age;
             }
         }
-        public Person(int SerialNumber, string _Name, int _Phone, string _Address, DateTime _Birthday, Gender _Gender)
+        public Person(string _Name, int SerialNumber, Gender _Gender, DateTime _Birthday)
         {
             this.Name = _Name;
-            this.Phone = _Phone;
-            this.Address = _Address;
-            this.Birthday = _Birthday;
             this.Gender = _Gender;
+            this.Birthday = _Birthday;
             ID = SerialNumber;
         }
-        
     }
 }

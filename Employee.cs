@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LibraryApp
 {
-    abstract class Employee : Person
+    abstract class Employee : PersonWithContact
     {
         private static int SerialNumber = 95671020;
         public int NumberOfBorrowBooks = 0;
@@ -17,8 +17,8 @@ namespace LibraryApp
                 return SerialNumber - 95671020;
             }
         }
-        public Employee(string Name, Gender gender, DateTime Birthday, int Phone, string Address,double Salary)
-            : base(SerialNumber, Name, Phone, Address, Birthday, gender)
+        public Employee(string _Name, Gender _Gender, string _Phone, string _Email, DateTime _Birthday, double _Salary)
+            : base(_Name, SerialNumber, _Phone, _Email, _Gender, _Birthday)
         {
             this.Salary = Salary;
             SerialNumber++;

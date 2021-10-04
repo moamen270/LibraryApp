@@ -8,16 +8,19 @@ namespace LibraryApp
     {
         private List<Book> Books { get; }
         private static int SerialNumber = 21568686;
-        public Author(string Name, int Phone, string Address, DateTime Birthday, Gender gender)
-            :base(SerialNumber, Name, Phone, Address, Birthday, gender)
+
+        public Author(string _Name, Gender _Gender, DateTime _Birthday)
+            : base(_Name, SerialNumber, _Gender, _Birthday)
         {
             Books = new List<Book>();
             SerialNumber++;
         }
-        public void SetBooks(Book book)
+
+        public void SetBook(Book book)
         {
             Books.Add(book);
         }
+
         public void GetBooks()
         {
             foreach (var item in Books)

@@ -4,22 +4,22 @@ using System.Text;
 
 namespace LibraryApp
 {
-    class OneSideCard<Type>:Card
-    {        
+    class OneSideCard<Type> : Card
+    {
         private Member Member;
-        private Book Book;        
-        private static int NumberOfMemberCards=0;
+        private Book Book;
+        private static int NumberOfMemberCards = 0;
         public static OneSideCard<Member> test = new OneSideCard<Member>(m1);
-        public static Member m1 = new Member("maomen", 44545151, "adssad", DateTime.Now, Gender.Male);
+        public static Member m1 = new Member("maomen", "44545151", "adssad", Gender.Male, DateTime.Now);
 
 
         public OneSideCard(Book book) : base(false)
         {
-           
+
             Book = book;
             BorrowDate = DateTime.Now;
         }
-        public OneSideCard(Member member):base(false)
+        public OneSideCard(Member member) : base(false)
         {
             Member = member;
             BorrowDate = DateTime.Now;
@@ -29,7 +29,7 @@ namespace LibraryApp
         {
             StringBuilder BorrowCard = new StringBuilder();
             BorrowCard.AppendLine($"Borrow Date: {BorrowDate.ToShortDateString()}\tReturn Date: {ReturnDate}");
-            if (this.GetType().ToString() == "LibraryApp.OneSideCard`1[LibraryApp.Member]")
+            if (this.Book == null)
             {
                 BorrowCard.AppendLine($"Member Name: {Member.Name}\tMember ID: {Member.ID}");
                 BorrowCard.AppendLine($"Serial Number: {CardID}");
@@ -43,9 +43,10 @@ namespace LibraryApp
             }
 
         }
-        public string ToString(bool Borrow)
+        public string PrintIn()
         {
-            if (this.GetType().ToString() == "LibraryApp.OneSideCard`1[LibraryApp.Member]")
+            /*this.GetType().ToString() == "LibraryApp.OneSideCard`1[LibraryApp.Member]" ||*/
+            if (this.Book == null)
             {
                 return $"Member Name: {Member.Name}\tMember ID: {Member.ID}";
             }

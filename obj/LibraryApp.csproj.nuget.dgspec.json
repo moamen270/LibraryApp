@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moamen\\source\\repos\\LibraryApp\\LibraryApp.csproj": {}
+    "C:\\Users\\mmoam\\source\\repos\\LibraryApp\\LibraryApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moamen\\source\\repos\\LibraryApp\\LibraryApp.csproj": {
+    "C:\\Users\\mmoam\\source\\repos\\LibraryApp\\LibraryApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moamen\\source\\repos\\LibraryApp\\LibraryApp.csproj",
+        "projectUniqueName": "C:\\Users\\mmoam\\source\\repos\\LibraryApp\\LibraryApp.csproj",
         "projectName": "LibraryApp",
-        "projectPath": "C:\\Users\\moamen\\source\\repos\\LibraryApp\\LibraryApp.csproj",
-        "packagesPath": "C:\\Users\\moamen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moamen\\source\\repos\\LibraryApp\\obj\\",
+        "projectPath": "C:\\Users\\mmoam\\source\\repos\\LibraryApp\\LibraryApp.csproj",
+        "packagesPath": "C:\\Users\\mmoam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mmoam\\source\\repos\\LibraryApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\moamen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mmoam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

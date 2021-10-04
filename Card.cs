@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace LibraryApp
 {
     abstract class Card
     {
         public int CardID { get; }
-        private static int SerialNumber = 659846153;      
+        private static int SerialNumber = 659846153;
         public DateTime BorrowDate;
         public string ReturnDate
         {
@@ -26,5 +27,6 @@ namespace LibraryApp
                 CardID = SerialNumber;
 
         }
+       
     }
 }

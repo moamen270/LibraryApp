@@ -12,3 +12,17 @@ C:\Users\moamen\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.cspro
 C:\Users\moamen\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.dll
 C:\Users\moamen\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.pdb
 C:\Users\moamen\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.genruntimeconfig.cache
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.csproj.AssemblyReference.cache
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.AssemblyInfoInputs.cache
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.AssemblyInfo.cs
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.csproj.CoreCompileInputs.cache
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.dll
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.pdb
+C:\Users\mmoam\source\repos\LibraryApp\bin\Debug\netcoreapp3.1\LibraryApp.exe
+C:\Users\mmoam\source\repos\LibraryApp\bin\Debug\netcoreapp3.1\LibraryApp.deps.json
+C:\Users\mmoam\source\repos\LibraryApp\bin\Debug\netcoreapp3.1\LibraryApp.runtimeconfig.json
+C:\Users\mmoam\source\repos\LibraryApp\bin\Debug\netcoreapp3.1\LibraryApp.runtimeconfig.dev.json
+C:\Users\mmoam\source\repos\LibraryApp\bin\Debug\netcoreapp3.1\LibraryApp.dll
+C:\Users\mmoam\source\repos\LibraryApp\bin\Debug\netcoreapp3.1\LibraryApp.pdb
+C:\Users\mmoam\source\repos\LibraryApp\obj\Debug\netcoreapp3.1\LibraryApp.genruntimeconfig.cache
