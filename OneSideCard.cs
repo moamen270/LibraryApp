@@ -4,58 +4,63 @@ using System.Text;
 
 namespace LibraryApp
 {
-    class OneSideCard<Type> : Card
+    class OneSideCard<MemberOrBook> : Card
     {
-        private Member Member;
-        private Book Book;
-        private static int NumberOfMemberCards = 0;
-        public static OneSideCard<Member> test = new OneSideCard<Member>(m1);
-        public static Member m1 = new Member("maomen", "44545151", "adssad", Gender.Male, DateTime.Now);
+        private object _MemberOrBook;
 
-
-        public OneSideCard(Book book) : base(false)
+        public OneSideCard(MemberOrBook memberOrBook)
         {
+            try
+            {
+                if (!(memberOrBook is Member || memberOrBook is Book))
+                    throw new FormatException("Use Only Member or Book type");
+                _MemberOrBook = memberOrBook;
+                BorrowDate = DateTime.Now;            
+            }
+            catch (Exception ex)
+            {
 
-            Book = book;
-            BorrowDate = DateTime.Now;
+                Console.WriteLine(ex.Message);
+            }
+            
+
+
         }
-        public OneSideCard(Member member) : base(false)
+
+        public string PrintIn()
         {
-            Member = member;
-            BorrowDate = DateTime.Now;
-            NumberOfMemberCards++;
+            /*this.GetType().ToString() == "LibraryApp.OneSideCard`1[LibraryApp.Member]" ||*/
+            if (_MemberOrBook is Member)
+            {
+                return "  " + $"Member Name: {((Member)_MemberOrBook).Name}\tMember ID: {((Member)_MemberOrBook).ID}";
+            }
+            else
+            {
+                return "  " + $"Book Name: {((Book)_MemberOrBook).Name}\tBook ID: {((Book)_MemberOrBook).ID}";
+            }
         }
+
+
         public override string ToString()
         {
             StringBuilder BorrowCard = new StringBuilder();
             BorrowCard.AppendLine($"Borrow Date: {BorrowDate.ToShortDateString()}\tReturn Date: {ReturnDate}");
-            if (this.Book == null)
+            if (_MemberOrBook is Member)
             {
-                BorrowCard.AppendLine($"Member Name: {Member.Name}\tMember ID: {Member.ID}");
-                BorrowCard.AppendLine($"Serial Number: {CardID}");
+                BorrowCard.AppendLine("   " + $"Member Name: {((Member)_MemberOrBook).Name}\tMember ID: {((Member)_MemberOrBook).ID}");
+                BorrowCard.AppendLine("   " + $"Serial Number: {CardID}");
                 return BorrowCard.ToString();
             }
             else
             {
-                BorrowCard.AppendLine($"Book Name: {Book.Name}\tBook ID: {Book.ID}");
-                BorrowCard.AppendLine($"Serial Number: {CardID}");
+                BorrowCard.AppendLine("   " + $"Book Name: {((Book)_MemberOrBook).Name}\tBook ID: {((Book)_MemberOrBook).ID}");
+                BorrowCard.AppendLine("   " + $"Serial Number: {CardID}");
                 return BorrowCard.ToString();
             }
 
         }
-        public string PrintIn()
-        {
-            /*this.GetType().ToString() == "LibraryApp.OneSideCard`1[LibraryApp.Member]" ||*/
-            if (this.Book == null)
-            {
-                return $"Member Name: {Member.Name}\tMember ID: {Member.ID}";
-            }
-            else
-            {
-                return $"Book Name: {Book.Name}\tBook ID: {Book.ID}";
-            }
-
-        }
+       
 
     }
 }
+

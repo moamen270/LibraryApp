@@ -9,10 +9,11 @@ namespace LibraryApp
         Male,
         Female
     }
+
     abstract class Person
     {
         public string Name { get; }
-        public int ID { get; }
+        public string ID { get; set; }
         public Gender Gender { get; }
         public DateTime Birthday { get; }
         public int Age
@@ -27,12 +28,18 @@ namespace LibraryApp
                 return _Age;
             }
         }
-        public Person(string _Name, int SerialNumber, Gender _Gender, DateTime _Birthday)
+
+
+        public Person(string _Name, Gender _Gender, DateTime _Birthday)
         {
-            this.Name = _Name;
-            this.Gender = _Gender;
-            this.Birthday = _Birthday;
-            ID = SerialNumber;
+            Name = _Name;
+            Gender = _Gender;
+            Birthday = _Birthday;
         }
+        public Person()
+        {
+
+        }
+
     }
 }

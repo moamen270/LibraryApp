@@ -10,10 +10,10 @@ namespace LibraryApp
         private static int SerialNumber = 21568686;
 
         public Author(string _Name, Gender _Gender, DateTime _Birthday)
-            : base(_Name, SerialNumber, _Gender, _Birthday)
+            : base(_Name, _Gender, _Birthday)
         {
             Books = new List<Book>();
-            SerialNumber++;
+            ID = $"A-{SerialNumber++}";
         }
 
         public void SetBook(Book book)
@@ -23,9 +23,9 @@ namespace LibraryApp
 
         public void GetBooks()
         {
-            foreach (var item in Books)
+            foreach (Book book in Books)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(book);
             }
         }
     }

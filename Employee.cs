@@ -6,22 +6,12 @@ namespace LibraryApp
 {
     abstract class Employee : PersonWithContact
     {
-        private static int SerialNumber = 95671020;
-        public int NumberOfBorrowBooks = 0;
         public double Salary { get; }
-
-        public static int NumberOfMembers
+       
+        public Employee(string _Name, Gender _Gender, string _Phone, string _Email,string _Password, DateTime _Birthday, double _Salary)
+            : base(_Name, _Phone, _Email,_Password, _Gender, _Birthday)
         {
-            get
-            {
-                return SerialNumber - 95671020;
-            }
-        }
-        public Employee(string _Name, Gender _Gender, string _Phone, string _Email, DateTime _Birthday, double _Salary)
-            : base(_Name, SerialNumber, _Phone, _Email, _Gender, _Birthday)
-        {
-            this.Salary = Salary;
-            SerialNumber++;
+            this.Salary = Salary;            
         }
     }
 }

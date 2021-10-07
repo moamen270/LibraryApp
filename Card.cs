@@ -8,24 +8,20 @@ namespace LibraryApp
     abstract class Card
     {
         public int CardID { get; }
-        private static int SerialNumber = 659846153;
+        private static int _Serialnumber;
         public DateTime BorrowDate;
-        public string ReturnDate
-        {
-            get
-            {
-                return BorrowDate.AddDays(14).ToString();
-            }
-        }
-        public Card(bool Change)
-        {
-            if (Change)
-            {
-                CardID = ++SerialNumber;
-            }
-            else
-                CardID = SerialNumber;
+        public string ReturnDate { get => BorrowDate.AddDays(14).ToString(); }
 
+
+        public Card(int SerialNumber)
+        {
+            _Serialnumber = SerialNumber;
+            CardID = _Serialnumber;           
+        }
+
+        public Card()
+        {
+            CardID = _Serialnumber;
         }
        
     }
